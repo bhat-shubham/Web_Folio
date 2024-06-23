@@ -14,6 +14,11 @@
     font-family: "minimal5";
     src: url(assests/fonts/BricklayDemoRegular.ttf);
 }
+@font-face{
+    font-family: "minimal7";
+    src: url(/assests/fonts/BandarRegular.ttf);
+
+}
 a{
     text-decoration: none;
 }
@@ -42,13 +47,13 @@ a{
 .top_items {
     color: #ffff;
     display: flex;
-    font-family: "minimal6";
+    font-family:"minimal7";
     list-style-type:none;
     text-decoration: none;
     /* justify-content: right; */
     font-size: 25px;
-    gap:0.6vw;
-    font-weight: 900;
+    gap:0.5vw;
+    /* font-weight: 500; */
     margin-right: 0.8vw;
     }
 .top_items li:hover{
@@ -56,22 +61,9 @@ a{
     top: 0px;
     font-size: larger;
     transition-duration: 0.5s;
-    text-decoration-line: underline;
-    text-decoration-color: #383B53;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 2px;
-
-}
-.top_items img:hover{
-    position:relative ;
-    top: 0px;
-    border: none;
-    font-size: larger;
-    color: #092327;
-    transition-duration: 0.5s;
-    text-decoration-line: underline;
-    text-decoration-color: #383B53;
-    text-decoration-style: wavy;
+    /* text-decoration-line: underline; */
+    /* text-decoration-color: #383B53; */
+    /* text-decoration-style: wavy; */
     text-decoration-thickness: 2px;
 
 }
@@ -103,12 +95,6 @@ body{
     display: flex;
 
 }
-#body:hover{
-    border-style: none;
-    border-radius: 0;
-    transition-duration: 1.5s;
-}
-
 #pfp{
     position: absolute;
     top: 11rem;
@@ -172,8 +158,8 @@ body{
     /* background-color: #626267; */
     transition-duration: 0.4s;
     font-size: 50px;
-    height: 65px;
-    width: 14rem;
+    height: 60px;
+    width: 12rem;
     border-radius: 55px;
     border-color:yellow;
 }
@@ -258,7 +244,7 @@ footer{
 #text_socials{
     display: flex;
     margin-bottom: 30vh;
-    margin-left: 11.7vw;
+    margin-left: 14.5vw;
     /* text-align: center; */
     font-size: 25px;
     font-family: "minimal6";
@@ -394,3 +380,50 @@ footer{
     }
 
 }
+#download_div a{
+    color: white;
+}
+#download_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    font-size: 10vh;
+    margin-top: 7vh;
+}
+#down_button{
+    font-size: 4vh;
+    border-radius: 15px;
+    padding: 5px;
+    width: 30vh;
+    border-style: solid;
+    border-width: 0.3px;
+    background-color: #4E8098;
+    font-family: 'Times New Roman', Times, serif;
+}
+#down_button:hover{
+    border-style: dashed;
+    border-width: 1px;
+}
+#resume_container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 98.9vw; */
+    height: 100%;
+    background-color: #0F2027;
+    margin-left: 50vh;
+    margin-right: 50vh;
+}
+#resume{
+    justify-content: center;
+    align-items: center;
+    height: 1280px;
+    width: 1264px;
+    margin-top: auto;
+    border-style: dashed;
+    border-radius: 20px;
+}
+
+
