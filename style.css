@@ -30,11 +30,11 @@
 }
 @font-face{
     font-family: "minimal4";
-    src: url(Montserrat-Thin.ttf);
+    src: url(/assests/fonts/Montserrat-Thin.ttf);
 }
 @font-face {
     font-family: "minimal1";
-    src: url(Montserrat-Light.ttf);
+    src: url(/assests/fonts/Montserrat-Light.ttf);
 }
 a{
     text-decoration: none;
