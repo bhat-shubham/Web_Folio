@@ -3,14 +3,12 @@
     margin: 0;
 }
 ::-webkit-scrollbar {
-    width: 10px; /* Scrollbar width */
-    background-color: #8BFFFF; /* Track color */
+    width: 7px; 
+    background-color: #8BFFFF; 
   }
-  
-  /* Target the scrollbar thumb (using webkit prefix) */
   ::-webkit-scrollbar-thumb {
-    background-color: #8B80E0; /* Thumb color */
-    border-radius: 4px; /* Rounded corners */
+    background-color: #8b59E0;
+    border-radius: 4px;
   }
 @font-face{
     font-family: "minimal3";
@@ -86,10 +84,7 @@ a{
 }
 
 #navbar{
-    backdrop-filter: blur(10px);
-
-    /* filter: blur(10px); */
-    /* position: fixed; */
+    /* backdrop-filter: blur(10px); */
     height: 70px;
     /* background:linear-gradient(90deg,#0F2027,#203A43,#2C5364); */
     /* text-align: left; */
@@ -115,6 +110,9 @@ a{
     /* background-color: #70161E; */
 }
 #intro_text{
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
     font-size: 40px;
     text-decoration: underline;
     text-decoration-color: #e300ff;
@@ -127,38 +125,30 @@ a{
     
 }
 #intro_img{
-    animation: bob 2s infinite ease-in-out; /* Animation name, duration, infinite loop, easing */
+    animation: bob 4s infinite ease-in-out;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     /* border-style: solid; */
     border-radius: 50%;
-
+    backdrop-filter: blur(100%),brightness(1%);
     /* height: 30VH; */
     /* background-color: #8B80E0; */
     margin-right: 35px;
 }
 @keyframes bob {
-    from { transform: translateY(0px); } /* Start at top position */
-    50% { transform: translateY(-10px); } /* Move up 10px at midpoint */
-    to { transform: translateY(0px); } /* Return to starting position */
+    from { transform: translateY(0px); } 
+    50% { transform: translateY(15px); } 
+    to { transform: translateY(0px); } 
   }
 #intro_img img{
-
-
     height: 65vh;
     /* margin-right: 30px; */
 }
-#intro_img img:hover{
-    /* height: 60vh; */
-    /* transform: rotateY(180deg); */
-    transition-duration: 0.5s;
-}
 #intro{
-
     margin-left: 20px;
     text-transform: capitalize;
-    text-align: center;
+    text-align: left;
     font-family: "minimal3";
     font-size: 26px;
     /* width: 50vw; */
@@ -174,6 +164,9 @@ a{
 }
 #INTRODUCTION{
     max-width: 55vw;
+}
+#INRODUCTION pr{
+    font-size: 10px;
 }
 #intro_pr{
     margin-left: 20px;
@@ -225,11 +218,19 @@ footer{
 #brain{
     height: 45px;
 }
-/* #footer_images{
+#brain_res{
+    height: 45px;
+}
+#footer_images_res{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+#footer_images{
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
 #brain:hover{
     transition-duration: 1s;
     opacity: 1;
@@ -411,12 +412,12 @@ footer{
     margin-top: 7vh;
 }
 #down_button{
-    max-width: fit-content;
+    /* max-width: fit-content; */
     max-height: fit-content;
     font-size: 3.5vh;
     border-radius: 15px;
     padding: 3px;
-    width: 36vh;
+    /* width: 40vh; */
     border-style: dotted;
     border-width: 2px;
     border-color: #536976;
@@ -469,32 +470,40 @@ footer{
     /* background-repeat:unset; */
 }
 .wrapper_footer_home{
+    border-left: none;
+    border-right: none;
     /* margin-top: 0vh; */
-    border-style: solid;
+    /* border-style: solid; */
+
     border-bottom:#70161E;
     background:linear-gradient(200deg,#4286f4,#373B44);
     border-color: #70161E;
-    margin-left: none;
-    margin-right: none;
+    /* margin-left: 5px; */
+    /* margin-right: px; */
     border-width:0.5PX;
-    border-radius: 5PX;
+    border-radius: 2PX;
     position: relative;
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
 }
+#Copyright_text{
+    font-family: monospace;
+    margin-right: 5px;
+}
 .wrapper_footer_res{
-    border-style: solid;
+    /* border-style: solid; */
     border-bottom:#70161E;
-    background:linear-gradient(200deg,#4286f4,#373B44);
+    background-color: #122d59;
     margin-top:15vh;
     border-color: #70161E;
     margin-left: none;
     margin-right: none;
     border-width:0.5PX;
     border-radius: 5PX;
-    position: relative;
+    /* position: relative; */
     /* height: 100px; */
     display: flex;
     justify-content: space-between;
