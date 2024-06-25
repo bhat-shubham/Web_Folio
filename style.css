@@ -520,7 +520,7 @@ footer{
 #down_button:hover{
     max-width:max-content;
     letter-spacing: 0.1em;
-    transition-duration: 1s;
+    transition-duration: 0.4s;
     /* border-style: solid; */
     /* border-width: 3px; */
     /* width: 30vh; */
