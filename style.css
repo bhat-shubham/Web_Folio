@@ -3,13 +3,15 @@
     margin: 0;
 }
 ::-webkit-scrollbar {
-    width: 7px; 
-    background-color: #8BFFFF; 
+    width: 7.5px; 
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #8b59E0;
-    border-radius: 4px;
+    background-color:#48297f; 
+    border-radius: 40px;
   }
+html{
+    scroll-behavior: smooth;
+}
 @font-face{
     font-family: "minimal3";
     src: url(/assests/fonts/Poppins-Light.ttf);
@@ -53,6 +55,7 @@ a{
 #About{
     color: #ffff;
 }
+
 #Resume{
     color: #ffff;
 }
@@ -82,17 +85,19 @@ a{
     text-decoration-thickness: 2px;
 
 }
-
 #navbar{
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(20px);
     height: 70px;
-    /* background:linear-gradient(90deg,#0F2027,#203A43,#2C5364); */
+    background-color: rgba(200, 100, 100, 0.);
     /* text-align: left; */
     border-radius: 1vw;
-    /* position: relative; */
+    position: sticky;
     display: flex;
+    top: 0;
     align-items: center;
+    z-index: 10;
     justify-content: space-between;
+    transition: background-color 0.3s ease-in-out;
     /* border-style: dotted; */
 }
 #main_contentss{
@@ -109,6 +114,93 @@ a{
     font-size: 12.5vh;
     /* background-color: #70161E; */
 }
+.button_div{
+    margin-top: 35px;
+    display: flex;
+    /* height: 10vh; */
+    min-height: fit-content;
+    /* background-color: #70161E; */
+    max-height: fit-content;
+    /* max-width: fit-content; */
+    justify-content: center;
+    align-items: center;
+}
+.down_arrow{
+    margin-left: 5px;
+    animation: down 2s infinite ease-in-out;
+}
+@keyframes down{
+    from { transform: translateY(0px); } 
+    50% { transform: translateY(5px); } 
+    to { transform: translateY(0px); }
+}
+@keyframes showText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.more_button {
+    animation: down 2s infinite ease-in-out;
+    padding: 5px 10px;
+    border: 2px ridge transparent;
+    border-radius: 10px;
+    background-color: #8B80E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    font-family: "minimal2";
+    font-size: 37px;
+    max-width: fit-content;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .more_button:before { 
+    content: ""; 
+    display: block; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    color: inherit; 
+    font-size: inherit; /* Inherit font size from original text */
+    line-height: inherit; /* Inherit line height from original text */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .more_button:after {
+    font-size: 40px;
+    color:#48297f;
+    content: "Below";
+    font-size: 41px; /* Adjust font size if needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .more_button:hover {
+    cursor: pointer;
+    color: transparent;
+    padding: 15px 25px;
+    border-color: #8B80E0;
+  }
+  
+  .more_button:hover:before {
+    opacity: 1; /* Fade out original content on hover */
+  }
+  
+  .more_button:hover:after {
+    opacity: 1;
+    animation: showText 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes showText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 #intro_text{
     display: flex;
     justify-content: center;
@@ -494,20 +586,26 @@ footer{
     margin-right: 5px;
 }
 .wrapper_footer_res{
+    border-left: none;
+    border-right: none;
+    /* margin-top: 0vh; */
     /* border-style: solid; */
+
     border-bottom:#70161E;
-    background-color: #122d59;
-    margin-top:15vh;
+    background:linear-gradient(200deg,#4286f4,#373B44);
     border-color: #70161E;
-    margin-left: none;
-    margin-right: none;
+    /* margin-left: 5px; */
+    /* margin-right: px; */
     border-width:0.5PX;
-    border-radius: 5PX;
-    /* position: relative; */
-    /* height: 100px; */
+    border-radius: 2PX;
+    position: relative;
     display: flex;
+
     justify-content: space-between;
-    align-items: center;}
+    align-items: center;
+
+    margin-top:15vh;
+}
 #brain{
     opacity: 0;
     height: 35px;
