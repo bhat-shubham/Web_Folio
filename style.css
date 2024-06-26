@@ -3,6 +3,7 @@
     margin: 0;
 }
 ::-webkit-scrollbar {
+    background-color: #EBA6A9;
     width: 7.5px; 
   }
   ::-webkit-scrollbar-thumb {
@@ -44,13 +45,14 @@ a{
     text-decoration: none;
 }
 #top_name{
+    font-weight: 900;
     display: flex;
     font-family: "minimal5";
     text-align: left;
     font-size: 3vw;
     max-width: fit-content;
     min-width: fit-content;
-    color: #70161f;;
+    color: #EBA6A9;;
     margin-left: 0.5vw;
 }
 #Home{
@@ -121,7 +123,7 @@ a{
     /* border-style: dotted; */
 }
 @keyframes bgcolor{
-        to{background-color:#1b1a2ea9;}
+        to{background-color:#1b1a2b2e;}
 }
 #main_contentss{
     height: 90vh;
@@ -139,6 +141,7 @@ a{
     font-family: "minimal2";
     margin-left: 5vw;
     font-size: 12.5vh;
+    color: white;
     /* background-color: #70161E; */
 }
 @keyframes fade-out{
@@ -170,7 +173,7 @@ a{
 .more_button {
     animation: down 2s infinite ease-in-out;
     padding: 5px 10px;
-    border: 2px ridge transparent;
+    border: 2px transparent;
     border-radius: 10px;
     background-color: #8B80E0;
     display: flex;
@@ -183,6 +186,7 @@ a{
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    color: white;
   }
   
   .more_button:before { 
@@ -199,7 +203,7 @@ a{
   
   .more_button:after {
     /* font-size: 40px; */
-    color:#70161f;
+    color:#EBA6A9;
     content: "Below";
     font-size: 41px; /* Adjust font size if needed */
     position: absolute;
@@ -245,7 +249,7 @@ a{
 }
 
 #text_intro{
-    color: #70161f;
+    color: #EBA6A9;
     font-weight: bold;
     
 }
@@ -284,6 +288,7 @@ a{
 
 }
 #intro{
+    color: white;
     margin-left: 20px;
     text-transform: capitalize;
     text-align: center;
@@ -311,7 +316,7 @@ a{
 
 }
 .w2{
-    color: #70161f;
+    color: #EBA6A9;
 }
 .home{
     background-image:url(/assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg)
@@ -326,7 +331,7 @@ a{
 #w1 {
     
     
-    color: #70161f;
+    color: #EBA6A9;
 }
 .pfp_img{
     /* animation: fade-out linear;
@@ -386,7 +391,9 @@ footer{
     border-color: #4E8098;
     border-width: 3px;
     display: flex;
+    justify-content: space-evenly;
     height: 55px;
+    padding-inline: 2px;
     /* position: relative; */
 }
 #sm_logo:hover{
@@ -571,7 +578,7 @@ footer{
     font-weight: 900;
 }
 #down_button a{
-    color: #70161f;
+    color: #EBA6A9;
     font-weight: 900;
 }
 #down_button:hover{
@@ -619,11 +626,11 @@ footer{
     /* background-repeat:unset; */
 }
 .wrapper_footer_home{
-    backdrop-filter: blur(10000px);
+    backdrop-filter: blur(1000px);
 
     border-left: none;
     border-right: none;
-    background-color:#1b1a2e08;
+    background-color:#1b1a2ea9;
     border-width:0.5PX;
     border-radius: 2PX;
     position: relative;
@@ -634,11 +641,13 @@ footer{
 
 }
 #Copyright_text{
+    color: white;
     font-size:15px;
     font-family: minimal1;
     margin-right: 5px;
 }
 .wrapper_footer_home pre{
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -680,10 +689,13 @@ footer{
     opacity: 1;
     position: absolute;
     top: 50%; 
-    left: 48.5%; 
+    left: 49%; 
     transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
+}
+.wrapper_footer_res pre{
+    color: white;
 }
 #sm_links_res{
     margin-top: 1PX;
