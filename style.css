@@ -12,6 +12,10 @@
 html{
     scroll-behavior: smooth;
 }
+@font-face {
+    font-family: "minimal6";
+    src: url(/assests/fonts/Nunito-Regular.ttf);
+}
 @font-face{
     font-family: "minimal3";
     src: url(/assests/fonts/Poppins-Light.ttf);
@@ -46,23 +50,34 @@ a{
     font-size: 3vw;
     max-width: fit-content;
     min-width: fit-content;
-    color: #8B80E0;;
+    color: #70161f;;
     margin-left: 0.5vw;
 }
 #Home{
+    gap: 0.2vw;
+    display: flex;
     color: #ffff;
 }
 #About{
+    gap: 0.2vw;
+    display: flex;
     color: #ffff;
 }
 
 #Resume{
+    gap: 0.2vw;
+    display: flex;
     color: #ffff;
 }
 #Projects{
+    gap: 0.2vw;
+    display: flex;
     color: #ffff;
 }
 .top_items {
+
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
     color: #ffff;
     display: flex;
     font-family:"minimal1";
@@ -70,27 +85,32 @@ a{
     text-decoration: none;
     /* justify-content: right; */
     font-size: 20px;
-    gap:0.5vw;
+    gap:2vw;
     font-weight: 750;
+    transition: transform 0.5s ease; 
     margin-right: 0.8vw;
     }
 .top_items li:hover{
-    position:relative ;
-    top: 0px;
-    font-size: larger;
+    transform: scale(1.2) translateZ(0);
+    backface-visibility: hidden; 
+    perspective: 5px;
+    /* letter-spacing: 0.1vw; */
+    /* transform: translateZ(35px); */
+    /* font-size: large; */
+    /* position:relative ; */
+    /* top: 0px; */
+    /* font-size: larger; */
     transition-duration: 0.5s;
-    /* text-decoration-line: underline; */
-    /* text-decoration-color: #383B53; */
-    /* text-decoration-style: wavy; */
-    text-decoration-thickness: 2px;
 
 }
 #navbar{
+    animation: bgcolor linear;
+    animation-timeline: scroll();
     backdrop-filter: blur(20px);
     height: 70px;
     background-color: rgba(200, 100, 100, 0.);
     /* text-align: left; */
-    border-radius: 1vw;
+    /* border-radius: 5px; */
     position: sticky;
     display: flex;
     top: 0;
@@ -100,6 +120,9 @@ a{
     transition: background-color 0.3s ease-in-out;
     /* border-style: dotted; */
 }
+@keyframes bgcolor{
+        to{background-color:#1b1a2ea9;}
+}
 #main_contentss{
     height: 90vh;
     justify-content: space-between;
@@ -108,12 +131,18 @@ a{
 
 }
 .intro_text{
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -80px;
+
     text-align: center;
     font-family: "minimal2";
     margin-left: 5vw;
     font-size: 12.5vh;
     /* background-color: #70161E; */
 }
+@keyframes fade-out{
+    to{scale: 0.6;}}
 .button_div{
     margin-top: 35px;
     display: flex;
@@ -169,8 +198,8 @@ a{
   }
   
   .more_button:after {
-    font-size: 40px;
-    color:#48297f;
+    /* font-size: 40px; */
+    color:#70161f;
     content: "Below";
     font-size: 41px; /* Adjust font size if needed */
     position: absolute;
@@ -202,46 +231,63 @@ a{
     to { opacity: 1; }
   }
 #intro_text{
+    margin-left: 90px;
+
+
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     /* text-align: center; */
-    font-size: 40px;
-    text-decoration: underline;
-    text-decoration-color: #e300ff;
-    text-decoration-thickness: 5px;
-    text-underline-offset: 15px;
+    font-size: 30px;
+    text-decoration:underline;
+    text-decoration-color: #e762f8;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 10px;
 }
+
 #text_intro{
-    color: #8B80E0;
+    color: #70161f;
     font-weight: bold;
     
 }
 #intro_img{
-    animation: bob 4s infinite ease-in-out;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 58px;
+    animation-range-end: 500px;
+
+    /* animation: bob 4s infinite ease-in-out; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
     /* border-style: solid; */
-    border-radius: 50%;
-    backdrop-filter: blur(100%),brightness(1%);
+    /* border-radius: 50%; */
+    /* backdrop-filter: blur(100%),brightness(1%); */
     /* height: 30VH; */
     /* background-color: #8B80E0; */
     margin-right: 35px;
 }
+@keyframes fade-in{
+    from{ scale: .5; opacity:0;}
+    to{scale:1, opacity:1;}}
 @keyframes bob {
     from { transform: translateY(0px); } 
     50% { transform: translateY(15px); } 
     to { transform: translateY(0px); } 
   }
 #intro_img img{
+    border-radius: 20%;
+    /* background-color: black; */
     height: 65vh;
     /* margin-right: 30px; */
+}
+#intro_img img:hover{
+
 }
 #intro{
     margin-left: 20px;
     text-transform: capitalize;
-    text-align: left;
-    font-family: "minimal3";
+    text-align: center;
+    font-family: "minimal6";
     font-size: 26px;
     /* width: 50vw; */
     /* max-width: 75vw; */
@@ -265,23 +311,28 @@ a{
 
 }
 .w2{
-    color: #8B80E0;
+    color: #70161f;
 }
 .home{
-
-    background:linear-gradient(270deg, #8B80E0,#536976,#292E49);
+    background-image:url(/assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg)
     /* display: inline; */
 }
 .home {
 
 }
+#connect_text{
+        font-size: 20px;
+}
 #w1 {
     
     
-    color: #8B80E0;
+    color: #70161f;
 }
 .pfp_img{
-    filter: blur(1px);
+    /* animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -80px; */
+    /* filter: blur(1px); */
     border-style: solid;
     height: 45vh;
     margin-right: 10vw;
@@ -289,8 +340,7 @@ a{
     border-width: 2px;
     border-radius: 50%;}
 .pfp_img:hover{
-    filter: blur(0);
-    box-shadow: 0 0 95px var(--clr);
+    box-shadow: 0 0 205px var(--clr);
     background: var(--clr);
     /* border-style: dashed; */
     height: 47vh;
@@ -482,7 +532,6 @@ footer{
     navbar i{
         display: block;
     }
-
 }
 #intro{
 
@@ -504,18 +553,26 @@ footer{
     margin-top: 7vh;
 }
 #down_button{
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -125px;
     /* max-width: fit-content; */
     max-height: fit-content;
     font-size: 3.5vh;
     border-radius: 15px;
-    padding: 3px;
+    padding: 5px;
     /* width: 40vh; */
     border-style: dotted;
     border-width: 2px;
+    color: #70161f;
     border-color: #536976;
-    background-color: #4286e0;
-    font-family:"minimal4";
-    font-weight: 800;
+    background-color: #7248D6;
+    font-family:"minimal6";
+    font-weight: 900;
+}
+#down_button a{
+    color: #70161f;
+    font-weight: 900;
 }
 #down_button:hover{
     max-width:max-content;
@@ -558,20 +615,15 @@ footer{
     background: var(--clr);}
 .resume_home{
     height: fit-content;
-    background:linear-gradient(90deg,#373B44,#4286f4);
+    background-image: url(/assests/img/milad-fakurian-bexwsdM5BCw-unsplash.jpg)
     /* background-repeat:unset; */
 }
 .wrapper_footer_home{
+    backdrop-filter: blur(10000px);
+
     border-left: none;
     border-right: none;
-    /* margin-top: 0vh; */
-    /* border-style: solid; */
-
-    border-bottom:#70161E;
-    background:linear-gradient(200deg,#4286f4,#373B44);
-    border-color: #70161E;
-    /* margin-left: 5px; */
-    /* margin-right: px; */
+    background-color:#1b1a2e08;
     border-width:0.5PX;
     border-radius: 2PX;
     position: relative;
@@ -582,20 +634,30 @@ footer{
 
 }
 #Copyright_text{
-    font-family: monospace;
+    font-size:15px;
+    font-family: minimal1;
     margin-right: 5px;
 }
+.wrapper_footer_home pre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
 .wrapper_footer_res{
+    backdrop-filter: blur(10px);
     border-left: none;
     border-right: none;
     /* margin-top: 0vh; */
     /* border-style: solid; */
 
     border-bottom:#70161E;
-    background:linear-gradient(200deg,#4286f4,#373B44);
-    border-color: #70161E;
+    /* background:radial-gradient(#4286f4); */
+    /* background */
+    /* border-color: #70161E; */
     /* margin-left: 5px; */
     /* margin-right: px; */
+    backdrop-filter: blur(1000px);
     border-width:0.5PX;
     border-radius: 2PX;
     position: relative;
@@ -618,7 +680,7 @@ footer{
     opacity: 1;
     position: absolute;
     top: 50%; 
-    left: 49.7%; 
+    left: 48.5%; 
     transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
