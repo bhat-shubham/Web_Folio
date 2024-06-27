@@ -392,8 +392,8 @@ footer{
     border-width: 3px;
     display: flex;
     justify-content: space-evenly;
-    height: 55px;
-    padding-inline: 2px;
+    height: 45px;
+    padding-inline: 3px;
     /* position: relative; */
 }
 #sm_logo:hover{
@@ -627,7 +627,6 @@ footer{
 }
 .wrapper_footer_home{
     backdrop-filter: blur(1000px);
-
     border-left: none;
     border-right: none;
     background-color:#1b1a2ea9;
@@ -684,12 +683,17 @@ footer{
 #brain:hover{
     opacity: 1;
 }
+#ani{
+    height:50vh;
+    
+
+}
 .footer_images{
     height: 1px;
     opacity: 1;
     position: absolute;
     top: 50%; 
-    left: 49%; 
+    left: 48%; 
     transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
