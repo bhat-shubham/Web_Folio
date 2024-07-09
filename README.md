@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://shubham.vercel.app/" target="_blank">Vercel</a>
+  <a href="https://shubham.vercel.app/" target="_blank">Vercel Deployment</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="/assests/img/Animation - 1719416385826.gif" />
@@ -23,7 +23,7 @@ You can fork this repo to modify and make changes of your own.<br>Thanks!
 
 ## Built With
 
-My personal portfolio Website <a href="https://shubhambhat.vercel.app/" target="_blank">Vercel</a> which features some of my works as well as my resume and skills that i possess.<br/>
+My personal portfolio Website <a href="https://shubhambhat.vercel.app/" target="_blank">shubhambhat.vercel</a> which features some of my works as well as my resume and skills that i possess.<br/>
 
 This project was built using these technologies.
 
