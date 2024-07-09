@@ -9,13 +9,14 @@
 <br/>
 
 <center>
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/featured/featured-uses-html.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/featured/featured-uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/featured/featured-uses-badges.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)](https://forthebadge.com) &nbsp;
-</center> 
+[![forthebadge](https://forthebadge.com/images/featured/featured-uses-badges.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)](https://forthebadge.com)
+</center>
 TL;DR
 
 You can fork this repo to modify and make changes of your own.<br>Thanks!
