@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://shubham.vercel.app/" target="_blank">Vercel Deployment</a>
+  <a href="https://shubham.vercel.app/" target="_blank">Link Here!</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="/assests/img/Animation - 1719416385826.gif" />
@@ -11,17 +11,19 @@
 <center>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/featured/featured-uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/featured/featured-uses-badges.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)&nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)](https://forthebadge.com)&nbsp;
+[![forthebadge](https://forthebadge.com/images/featured/featured-uses-html.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/featured/featured-uses-badges.svg)](https://forthebadge.com)&nbsp;
+
+
 </center>
 TL;DR
 
-You can fork this repo to modify and make changes of your own.<br>Thanks!
+Feel Free To fork this repo to modify and make changes of your own.<br>Thanks!
 
-## Built With
+## Tech Used
 
 My personal portfolio Website <a href="https://shubhambhat.vercel.app/" target="_blank">shubhambhat.vercel</a> which features some of my works as well as my resume and skills that i possess.<br/>
 
