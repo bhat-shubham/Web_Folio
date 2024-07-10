@@ -3,7 +3,7 @@
   <a href="https://shubhambhat.vercel.app/" target="_blank">Link Here!</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="/assests/img/Animation - 1719416385826.gif" />
+  <img alt="Demo" src="/assests/img/preview_laptop_phone.png" />
 </div>
 
 <br/>
