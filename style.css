@@ -57,25 +57,32 @@ a{
     margin-left: 0.5vw;
 }
 #Home{
+    transition: color 0.5s ease-in-out;
     gap: 0.2vw;
     display: flex;
-    color: #ffff;
+    color: #000;
 }
 #About{
+    transition: color 0.5s ease-in-out;
+    /* font-weight: 900; */
     gap: 0.2vw;
     display: flex;
-    color: #ffff;
+    color: #000;
 }
 
 #Resume{
+    transition: color 0.5s ease-in-out;
+
     gap: 0.2vw;
     display: flex;
-    color: #ffff;
+    color: #000;
 }
 #Projects{
+    transition: color 0.5s ease-in-out;
+
     gap: 0.2vw;
     display: flex;
-    color: #ffff;
+    color:#000;
 }
 #navitem-button{
     font-family:"minimal1" ;
@@ -342,6 +349,7 @@ a{
 
 } */
 .mode-btn {
+    
     overflow: hidden;
     --duration: 7s;
     --easing: linear;
@@ -390,6 +398,7 @@ a{
     box-shadow: 0 0 14px var(--c-shadow);
   }
 .mode-btn_light{
+    transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
     --c-color-1: #C768FA;
     --c-color-2: #CB67FD;
     --c-color-3: #e21bda;
@@ -418,7 +427,7 @@ a{
     font-size: 01px;
     /* letter-spacing: 0.02em; */
     /* line-height: 1.5; */
-    color: var(--c-color);
+    
     background: radial-gradient(
       circle,
       var(--c-radial-inner),
@@ -427,20 +436,35 @@ a{
     
     box-shadow: 0 0 14px var(--c-shadow);
 }
-.mode-btn_dark{
+.mode-btn_dark {
     overflow: hidden;
-    --duration: 7s;
+    --duration: 5s;
     --easing: linear;
     --c-color-1: #06030a;
     --c-color-2: #000000;
     --c-color-3: #fff8ff;
     --c-color-4: #e4dfe2;
     --c-shadow: rgba(200, 14, 150, 0.5);
-    --c-shadow-inset-top: rgba(230, 0, 255, 0.9);
-    --c-shadow-inset-bottom: rgba(255, 250, 215, 0.8);
     --c-radial-inner: #a515ff;
     --c-radial-outer: #b872ff;
-    --c-color: #c73ac7;
+    transition: var(--c-color) 0.5s ease-in-out;
+    transition: var(--c-color-1) 0.5s ease-in-out;
+    transition: var(--c-color-2) 0.5s ease-in-out;
+    transition: var(--c-color-3) 0.5s ease-in-out;
+    transition: background 0.5s ease, color 0.5s ease;
+    transition: var(--c-color-4) 0.5s ease-in-out;
+    transition: 
+    background 0.5s ease,
+    box-shadow 0.5s ease,
+    filter 0.5s ease;
+      background: radial-gradient(
+      circle,
+      var(--c-radial-inner),
+      var(--c-radial-outer) 80%
+    );
+    color: var(--c-color);
+    box-shadow: 0 0 14px var(--c-shadow);
+  
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
     outline: none;
@@ -453,53 +477,16 @@ a{
     margin: 0;
     text-align: center;
     font-weight: 900;
-    font-size: 01px;
-    /* letter-spacing: 0.02em; */
-    /* line-height: 1.5; */
-    /* color: var(--c-color); */
-    background: radial-gradient(
-      circle,
-      var(--c-radial-inner),
-      var(--c-radial-outer) 80%
-    );
-    
-    box-shadow: 0 0 14px var(--c-shadow);
-}
-
-  
-  .mode-btn_dark:before {
-    /* content: ""; */
-    pointer-events: none;
-    position: absolute;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    /* border-radius: 24px; */
-    box-shadow:
-      inset 0 3px 12px var(--c-shadow-inset-top),
-      inset 0 -3px 4px var(--c-shadow-inset-bottom);
+    font-size: 10px;
   }
+
   
   .mode-btn_dark .wrapper {
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     overflow: hidden;
-    /* border-radius: 24px; */
     min-width: 25px;
     padding: 12px 0;
   }
-  
-  .mode-btn_dark .wrapper span {
-    /* display: inline-block; */
-    /* position: relative; */
-    z-index: 1;
-  }
-  
-  .mode-btn_dark:hover {
-    /* --duration: 1400ms; */
-  }
-  
   .mode-btn_dark .wrapper .circle {
     position: absolute;
     left: 0;
@@ -1380,18 +1367,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 98.9vw; */
     height: 100%;
-    /* background-color: #0F2027; */
-    margin-left: 50vh;
-    margin-right: 50vh;
 }
 #resume{
-    /* opacity: 0; */
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 1280px;
-    width: 1264px;
+    height: 1300px;
     margin-top: auto;
     border-width: 5px;
     border-style: solid;
@@ -1502,28 +1484,3 @@ footer{
     justify-content: center;
     align-items:center;
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

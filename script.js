@@ -19,16 +19,30 @@ modebtn.addEventListener("click", () => {
   const home = document.querySelector(".home");
 
   if (currmode === "light") {
-    // Switch to dark mode
-    // modebtn.classList.replace("mode-btn_dark", "mode-btn_light");    
-    // modebtn.classList.add("mode-btn_light");
+    modebtn.style.setProperty('transition', 'color 0.5s ease, color 0.5s ease;');
+    modebtn.style.setProperty('--c-color-1', '#C768FA');
+    modebtn.style.setProperty('--c-color-2', '#CB67FD');
+    modebtn.style.setProperty('--c-color-3', '#e21bda');
+    modebtn.style.setProperty('--c-color-4', '#d31e94');
+    modebtn.style.setProperty('--c-radial-inner', '#a515ff');
+    modebtn.style.setProperty('--c-radial-outer', '#b872ff');
+    document.querySelector("#Home").style.color = "#ffffff";
+    document.querySelector("#About").style.color = "#ffffff";
+    document.querySelector("#Resume").style.color = "#ffffff";
+    document.querySelector("#Projects").style.color = "#ffffff";
     home.style.backgroundImage = "url('assests/img/dark.jpg')";
     currmode = "dark";
   } else {
-    // Switch to light mode
-    modebtn.classList.add("mode-btn_dark");
-    // modebtn.classList.remove("mode_btn");
-    // modebtn.classList.replace("mode-btn_light", "mode-btn_dark");
+    document.querySelector("#Home").style.color = "#000000";
+    document.querySelector("#About").style.color = "#000000";
+    document.querySelector("#Resume").style.color = "#000000";
+    document.querySelector("#Projects").style.color = "#000000";
+    modebtn.style.setProperty('--c-color-1', '#06030a');
+    modebtn.style.setProperty('--c-color-2', '#000000');
+    modebtn.style.setProperty('--c-color-3', '#f0f8ff');
+    modebtn.style.setProperty('--c-color-4', '#e4dfe2');
+    modebtn.style.setProperty('--c-radial-inner', '#a515ff');
+    modebtn.style.setProperty('--c-radial-outer', '#b872ff');
     home.style.backgroundImage = "url('assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg')";
     currmode = "light";
   }
