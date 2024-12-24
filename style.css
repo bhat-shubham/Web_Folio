@@ -681,8 +681,13 @@ a{
     color: #EBA6A9;
 }
 #pfp_img{
-    transition: background 0.5s ease-in-out;
+    background-size: 100% 100%; /* Initial background size */
+    /* transition: background-size 0.5s ease-in; */
+    /* transition: background 0.5s ease-in-out; */
     background: linear-gradient(to bottom, #fc00ff, #00dbde);
+    background-position: 100% 0;
+    transition: background-size 1.5s ease-in-out;
+    
 
 /* background: linear-gradient(to right, #434343, #000000); */
 
@@ -692,22 +697,24 @@ a{
     animation-timeline: view();
     animation-range: exit -80px; */
     /* filter: blur(1px); */
-    opacity: 1;
+    /* opacity: 0; */
     border-style: solid;
     height: 45vh;
     margin-right: 10vw;
     border-color: #8B80E0;
     border-width: 2px;
     border-radius: 50%;
-    /* transition: opacity 0.5s ease-in-out; */
+    opacity: 1;
+    /* transition: opacity 3s ease-in-out; */
 }
+
 #pfp {
-    transition: background 0.5s ease-in-out;
+    /* transition: background 0.5s ease-in-out; */
 
     /* background-color: #a17fe0; */
   }
 #pfp_img:hover{
-    transition: background 0.5s ease-in-out;
+    /* transition: background 0.5s ease-in-out; */
 
     box-shadow: 0 0 205px var(--clr);
     /* background: var(--clr); */

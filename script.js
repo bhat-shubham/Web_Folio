@@ -21,7 +21,7 @@ modebtn.addEventListener("click", () => {
   const home = document.querySelector(".home");
 
   if (currmode === "light") {
-    modebtn.style.setProperty('transition', 'color 0.5s ease, color 0.5s ease;');
+    // modebtn.style.setProperty('transition', 'color 0.5s ease, color 0.5s ease;');
     modebtn.style.setProperty('--c-color-1', '#C768FA');
     modebtn.style.setProperty('--c-color-2', '#CB67FD');
     modebtn.style.setProperty('--c-color-3', '#e21bda');
@@ -32,17 +32,19 @@ modebtn.addEventListener("click", () => {
     document.querySelector("#About").style.color = "#ffffff";
     document.querySelector("#Resume").style.color = "#ffffff";
     document.querySelector("#Projects").style.color = "#ffffff";
-    pfpimg.style.setProperty('background', 'linear-gradient(to right, #434343, #000000');
-    // image1.classList.toggle("hidden");
+    pfpimg.style.background="linear-gradient(to right, #434343,rgb(160, 154, 154))";
     home.style.backgroundImage = "url('assests/img/dark.jpg')";
-    // pfpimg.src='assests/img/pfp-dark.png';
-    // pfpimg.classList.toggle("hidden");
+    pfpimg.style.backgroundSize = "500% 500%";
+    // pfpimg.style.opacity = "0";
+    // pfpimg.style.backgroundPosition = "0% 100%";
     currmode = "dark";
   } else {
-    pfpimg.style.setProperty('background', 'linear-gradient(to bottom, #fc00ff, #00dbde');
+    pfpimg.style.setProperty('background', 'linear-gradient(to bottom, #fc00ff, #00dbde)');
+    pfpimg.style.backgroundSize = "100% 100%";
+    pfpimg.classList.remove("active");  // Remove the active class to reset the gradient position
 
-    // pfpimg.classList.toggle("hidden");
-    // pfpimg.src='assests/img/pfp-light.png';
+    // pfpimg.style.opacity = "1";
+
     document.querySelector("#Home").style.color = "#000000";
     document.querySelector("#About").style.color = "#000000";
     document.querySelector("#Resume").style.color = "#000000";
