@@ -13,6 +13,8 @@
 // });
 let modebtn = document.querySelector(".mode-btn_dark");
 let currmode = "light";
+const pfpimg=document.getElementById("pfp_img");
+
 // modebtn.classList.add("mode-btn_dark")
 
 modebtn.addEventListener("click", () => {
@@ -30,9 +32,17 @@ modebtn.addEventListener("click", () => {
     document.querySelector("#About").style.color = "#ffffff";
     document.querySelector("#Resume").style.color = "#ffffff";
     document.querySelector("#Projects").style.color = "#ffffff";
+    pfpimg.style.setProperty('background', 'linear-gradient(to right, #434343, #000000');
+    // image1.classList.toggle("hidden");
     home.style.backgroundImage = "url('assests/img/dark.jpg')";
+    // pfpimg.src='assests/img/pfp-dark.png';
+    // pfpimg.classList.toggle("hidden");
     currmode = "dark";
   } else {
+    pfpimg.style.setProperty('background', 'linear-gradient(to bottom, #fc00ff, #00dbde');
+
+    // pfpimg.classList.toggle("hidden");
+    // pfpimg.src='assests/img/pfp-light.png';
     document.querySelector("#Home").style.color = "#000000";
     document.querySelector("#About").style.color = "#000000";
     document.querySelector("#Resume").style.color = "#000000";
