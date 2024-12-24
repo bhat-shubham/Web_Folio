@@ -1,16 +1,6 @@
-// let modebtn=document.querySelector(".mode-btn");
-// let currmode="light";
-// modebtn.addEventListener("click",() => {
-//     if(currmode==="light"){
-//         document.querySelector(".home").style.backgroundImage="url('assests/img/dark.jpg')";
-//         currmode="dark";
-
-        
-//     }else{
-//         currmode="light";
-//         document.querySelector(".home").style.backgroundImage="url('assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg')";
-//     }
-// });
+gsap.from("li", { duration: 1, y: "-100%", opacity: 0, ease: "back", stagger: 0.5,delay:0.3 });
+gsap.from(".intro_text",{duration:2,delay:0.5, opacity:0});
+gsap.from("#pfp",{duration:3,opacity:0,delay:0.5,ease:"back"});
 let modebtn = document.querySelector(".mode-btn_dark");
 let currmode = "light";
 const pfpimg=document.getElementById("pfp_img");
