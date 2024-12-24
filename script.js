@@ -14,6 +14,7 @@
 let modebtn = document.querySelector(".mode-btn_dark");
 let currmode = "light";
 const pfpimg=document.getElementById("pfp_img");
+const morebtn=document.querySelector(".more_button");
 
 // modebtn.classList.add("mode-btn_dark")
 
@@ -24,7 +25,7 @@ modebtn.addEventListener("click", () => {
     // modebtn.style.setProperty('transition', 'color 0.5s ease, color 0.5s ease;');
     modebtn.style.setProperty('--c-color-1', '#C768FA');
     modebtn.style.setProperty('--c-color-2', '#CB67FD');
-    modebtn.style.setProperty('--c-color-3', '#e21bda');
+    modebtn.style.setProperty('--c-color-3', '#EBA6A9');
     modebtn.style.setProperty('--c-color-4', '#d31e94');
     modebtn.style.setProperty('--c-radial-inner', '#a515ff');
     modebtn.style.setProperty('--c-radial-outer', '#b872ff');
@@ -34,6 +35,8 @@ modebtn.addEventListener("click", () => {
     document.querySelector("#Projects").style.color = "#ffffff";
     pfpimg.style.background="linear-gradient(to right, #434343,rgb(160, 154, 154))";
     home.style.backgroundImage = "url('assests/img/dark.jpg')";
+    morebtn.style.backgroundColor = "#52515f";
+    // home.style.setProperty('filter', 'grayscale(100%)');
     pfpimg.style.backgroundSize = "500% 500%";
     // pfpimg.style.opacity = "0";
     // pfpimg.style.backgroundPosition = "0% 100%";
@@ -55,6 +58,7 @@ modebtn.addEventListener("click", () => {
     modebtn.style.setProperty('--c-color-4', '#e4dfe2');
     modebtn.style.setProperty('--c-radial-inner', '#a515ff');
     modebtn.style.setProperty('--c-radial-outer', '#b872ff');
+    morebtn.style.backgroundColor = "#8B80E0";
     home.style.backgroundImage = "url('assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg')";
     currmode = "light";
   }
