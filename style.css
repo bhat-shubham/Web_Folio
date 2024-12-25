@@ -45,6 +45,20 @@ html{
 a{
     text-decoration: none;
 }
+.str_holder{
+    width: 100%;
+    /* height: 10vh; */
+    /* background-color: #000; */
+    /* z-index: 1000; */
+    /* position: relative; */
+}
+svg{
+    /* background-color: #a17fe0; */
+    /* opacity: 0; */
+    /* z-index: 1; */
+    position: absolute;
+    /* height: 1000; */
+}
 #cursor_bg{
     height: 20px;
     width: 20px;
@@ -156,7 +170,7 @@ a{
         to{background-color:#1b1a2b2e;}
 }
 #main_contentss{
-    height: 90vh;
+    height: 87vh;
     justify-content: space-around;
     align-items: center;
     display: flex;
@@ -348,6 +362,7 @@ a{
 }
 .home{
     transition: background-image 0.5s ease-in-out;
+    /* background-color: #7042F4; */
     background-image:url(/assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg)
     /* display: inline; */
 }
@@ -690,6 +705,7 @@ a{
     color: #EBA6A9;
 }
 #pfp_img{
+    z-index: 100;
     background-size: 100% 100%; /* Initial background size */
     /* transition: background-size 0.5s ease-in; */
     /* transition: background 0.5s ease-in-out; */
@@ -720,9 +736,12 @@ a{
 
     /* background-color: #a17fe0; */
   }
+  svg{
+    /* background-color: #a17fe0; */
+  }
 #pfp_img:hover{
     transition: box-shadow 0.5s ease;
-    /* box-shadow: 0 0 150px var(--clr); */
+    box-shadow: 0 0 150px var(--clr);
     /* background: var(--clr); */
     /* border-style: dashed; */
     /* height: 47vh; */

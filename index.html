@@ -11,6 +11,18 @@
     <link rel="Stylesheet" href="style.css">
         
 <body class="home">
+    <div class="str_holder">
+        <svg width="100%" height="850">
+            <defs>
+                <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#9C56F7" />
+                    <stop offset="100%" stop-color="#9352F8" />
+                </linearGradient>
+            </defs>
+            <path d="M 0 0 L 0 715 Q 595 485 1530 378 L 1530 0 Z" stroke="#transparent" fill="url(#myGradient)"/>
+            <!-- url(#myGradient) -->
+          </svg>
+        </div>
     <div id="cursor_bg"></div>
     <div id="navbar">
     <span id="top_name"> SB </span>
@@ -48,6 +60,7 @@
             
         </ul>
     </div>
+    
 <div id="main_contentss">
     <div class ="intro_text">Hi! I Am <pr class="w2">Shubham</pr><br>
     An Aspiring<br><pr id="w1"> Cyber Security Engineer.</pr><div class ="button_div"><a href="#intro"><button class="more_button">
@@ -58,6 +71,8 @@
     </div>
     
 </div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>

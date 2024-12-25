@@ -5,6 +5,7 @@ let currmode = "light";
 const pfpimg=document.getElementById("pfp_img");
 var morebtn=document.querySelector(".more_button");
 var cursor=document.querySelector("#cursor_bg");
+var line=document.querySelector("svg");
 // GSAP
 gsap.from("li", { duration: 1, y: "-40%", opacity: 0, ease: "back", stagger: 0.5,delay:0.3 });
 gsap.from("#top_name",{duration:1,y:"-40%",opacity:0,delay:0.5});
@@ -17,7 +18,7 @@ gsap.to("#pfp",{
         scroller:"body",
         // markers:true,
         start:"top 10%",
-        scrub:3,
+        scrub:2,
         // ease:power
     }
 })
@@ -62,6 +63,28 @@ pfpimg.addEventListener("mouseleave",function(){
 
     })
 })
+var init_path='M 0 0 L 0 715 Q 595 485 1530 378 L 1530 0 Z'
+// var final_path='M 0 200 Q 900 200 1000 100'
+line.addEventListener("mousemove",function(dets){
+    // console.log("hi")
+    const updatedPath = `M 0 0 L 0 715 Q ${dets.x} ${dets.y} 1530 378 L 1530 0 Z`;
+    // M 0 0 L 0 715 Q ${dets.x} ${dets.y} 1530 378 L 1530 0 Z 0
+    // M 0 100 Q 1000 100 1530 100
+    gsap.to("svg path",{
+        attr:{d:updatedPath},
+        ease:"elastic.out(1,0.7)",
+        duration:1.5
+    })
+})
+line.addEventListener("mouseleave",function(dets){
+    gsap.to("svg path",{
+        attr:{d:init_path},
+        ease:"elastic.out(1,0.7)",
+        duration:1.5
+    })
+ 
+})
+
 // mainjs
  
 // modebtn.classList.add("mode-btn_dark")
@@ -70,6 +93,7 @@ modebtn.addEventListener("click", () => {
   const home = document.querySelector(".home");
 
   if (currmode === "light") {
+    line.style.opacity=0;
     gsap.to(modebtn,{
         duration:1.2,
         
@@ -102,6 +126,7 @@ modebtn.addEventListener("click", () => {
     })
     gsap.to(home,{
         backdropFilter:"grayscale(0) brightness(1)",
+        duration:1.5
 
     })
     document.querySelector("#Home").style.color = "#000000";
