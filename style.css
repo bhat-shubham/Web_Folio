@@ -829,7 +829,9 @@ footer{
     color: #83858C
 }
 #menu{
-    display: none;
+    /* position: fixed; */
+
+    /* display: none; */
 }
 .cherru_home{
     background-image:url(/assests/img/nice_hearts_background_overlay_HD_video_overlay.gif) ;
@@ -944,6 +946,64 @@ footer{
 }
 
 @media only screen and (max-width:600px){
+    .mode-btn_dark{
+        display: none;
+    }
+    .home{
+        overflow-x:hidden;
+    }
+    svg {
+        width: 100%; /* Limit the width to fit the screen */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    path {
+        transform: scale(0); /* Optional: Scale down the path */
+        transform-origin: center; /* Ensure scaling happens from the center */
+    }
+}
+    .str_holder{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+    .menu_list{
+        display: flex;
+        font-family: "minimal1";
+        background-color: #860bfadf;
+        color:#FFA9D7;
+        position: absolute;
+        border-radius: 20px;
+        /* border-top: none; */
+        font-size: 15px;
+        height: 350px;
+        top: 5%;
+        right:-50.5vw;
+        backdrop-filter: blur(1000px);
+        flex-direction: column;
+        /* z-index:-10; */
+        align-items: center;
+        width: 50vw;
+        gap: 25px;
+
+        justify-content: center;
+    }
+    #navbar i{
+        /* display: block; */
+        font-weight: 900;
+        font-size: 40px;
+        position: absolute;
+        right: 0;
+        /* z-index:-1; */
+    }
+    .menu_list i{
+        top:2%;
+        right:5%;
+        border-radius: 50%;
+        background-color: #45018ac5;
+        position: absolute;
+
+    }
     .sm_linksmedia{
         /* justify-content: center; */
         /* align-items: center; */
@@ -965,10 +1025,6 @@ footer{
         align-items: center;
         display: flex;
     
-    }
-    #menu{
-        display: block;
-        font-weight: 900;
     }
     .wrapper_footer_home pre{
         color: white;

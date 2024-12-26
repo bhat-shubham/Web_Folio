@@ -69,6 +69,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+var tl=gsap.timeline()
+tl.to(".menu_list",{
+    right:0,
+    duration:0.5,
+})
+tl.from(".menu_list h1",{
+    y:50,
+    duration:0.2,
+    stagger:0.1,
+    opacity:0
+
+})
+tl.pause()
+var menu_but=document.querySelector("#navbar i")
+var close_but=document.querySelector(".menu_list i")
+menu_but.addEventListener("click",function(){
+    gsap.to(menu_but,{
+        opacity:0,
+        duration:0.2,
+    })
+    tl.play()
+})
+close_but.addEventListener("click",function(){
+    gsap.to(menu_but,{
+        opacity:1,
+        duration:1,
+    })
+    tl.reverse()
+})
 morebtn.addEventListener("mouseenter",function(){
     morebtn.style.overflow="hidden";
     // console.log("hey")
