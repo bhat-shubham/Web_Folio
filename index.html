@@ -14,15 +14,33 @@
     <div class="str_holder">
         <svg width="100%" height="850">
             <defs>
-                <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#9C56F7" />
-                    <stop offset="100%" stop-color="#9352F8" />
+                <linearGradient id="brighterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#A73CFF" />
+                    <stop offset="50%" stop-color="#9828FF" />
+                    <stop offset="100%" stop-color="#9D2CFF" />
                 </linearGradient>
+        
+                <!-- Dark Gradient -->
+                <!-- <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2C2C2C" />
+                    <stop offset="50%" stop-color="#1A1A1A" />
+                    <stop offset="100%" stop-color="#000000" />
+                </linearGradient> -->
             </defs>
-            <path d="M 0 0 L 0 715 Q 595 485 1530 378 L 1530 0 Z" stroke="#transparent" fill="url(#myGradient)"/>
+            <path d="M 0 0 L 0 715 Q 595 485 1530 378 L 1530 0 Z" stroke="#transparent" fill="url(#brighterGradient)"/>
             <!-- url(#myGradient) -->
           </svg>
+          <!-- <svg width="100%" height="190vh">
+            <defs>
+                <linearGradient id="myGradient1" x1="10%" y1="10%" x2="100%" y2="0%">
+                    <stop offset="100%" stop-color="#B360FA" />
+                    <stop offset="100%" stop-color="#9A57F5" />
+                </linearGradient>
+            </defs>
+            <path d="M 0 1385 L 0 715 Q 595 485 1530 378 L 1530 1385 Z" stroke="#transparent" fill="url(#myGradient1)"/>
+          </svg> -->
         </div>
+        
     <div id="cursor_bg"></div>
     <div id="navbar">
     <span id="top_name"> SB </span>

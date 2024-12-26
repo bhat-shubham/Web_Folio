@@ -1,12 +1,12 @@
 let modebtn = document.querySelector(".mode-btn_dark");
 // var below_but=document.querySelector(".document.body");
+const resume=document.querySelector("#resume");
 var top_div=document.querySelector("#main_contentss");
 let currmode = "light";
 const pfpimg=document.getElementById("pfp_img");
 var morebtn=document.querySelector(".more_button");
 var cursor=document.querySelector("#cursor_bg");
-var line=document.querySelector("svg");
-// GSAP
+const line = document.querySelector(".str_holder");// GSAP
 gsap.from("li", { duration: 1, y: "-40%", opacity: 0, ease: "back", stagger: 0.5,delay:0.3 });
 gsap.from("#top_name",{duration:1,y:"-40%",opacity:0,delay:0.5});
 gsap.from(".intro_text",{duration:1.5,x:"5%",delay:0.5, opacity:0});
@@ -18,20 +18,56 @@ gsap.to("#pfp",{
         scroller:"body",
         // markers:true,
         start:"top 10%",
-        scrub:2,
+        scrub:4,
         // ease:power
     }
 })
-document.body.addEventListener("mousemove",function(dets){
-    // console.log(dets)
-    gsap.to(cursor,{
-        x:dets.x,
-        y:dets.y,
-        duration:0.3,
-        ease:"power2"
-        // scale:1.5
-    })
+gsap.from(resume,{
+    opacity:0,
+    y:-50,
+    delay:0.2,
+    duration:1.5,
+    
+    // ease:"power2.out",
 })
+gsap.to(resume,{
+    border:"solid",
+    borderwidth:20,
+    // opacity:1,
+    
+})
+const down_but=document.querySelector("#down_button");
+gsap.from(down_but, { 
+    duration: 1, 
+    y: "-40%", 
+    opacity: 0, 
+    ease: "back",
+    delay:0.3 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const smlinks = document.querySelectorAll("#sm_logo");
+    smlinks.forEach(sm_logo => { 
+        sm_logo.addEventListener("mouseenter", function () {
+            gsap.to(this, { 
+                y: -5,
+                duration: 0.2,
+                // backgroundColor: "rgba(0,0,0,0.5)",
+                // border: "solid",
+                boxShadow: "0 0 15px 5px rgba(128, 0, 128, 0.7)",
+                // ease: "elastic.out(1, 0.4)",
+            });
+        });
+
+        sm_logo.addEventListener("mouseleave", function () {
+            gsap.to(this, {
+                boxShadow: "0 0 0px 0px #fff",
+                y: 0,
+                duration: 0.2,
+                ease: "power4.out",
+            });
+        });
+    });
+});
 morebtn.addEventListener("mouseenter",function(){
     morebtn.style.overflow="hidden";
     // console.log("hey")
@@ -51,7 +87,7 @@ morebtn.addEventListener("mouseleave",function(){
 })
 pfpimg.addEventListener("mouseenter",function(){
     gsap.to(pfpimg,{
-        duration:0.3,
+        duration:0.2,
         boxShadow:"0 0 150px var(--clr)"
 
     })
@@ -64,40 +100,52 @@ pfpimg.addEventListener("mouseleave",function(){
     })
 })
 var init_path='M 0 0 L 0 715 Q 595 485 1530 378 L 1530 0 Z'
-// var final_path='M 0 200 Q 900 200 1000 100'
+const svgPath = document.querySelector(".str_holder svg:first-child path");
+const initPath = svgPath.getAttribute("d");
 line.addEventListener("mousemove",function(dets){
-    // console.log("hi")
+    // console.log(dets)
     const updatedPath = `M 0 0 L 0 715 Q ${dets.x} ${dets.y} 1530 378 L 1530 0 Z`;
-    // M 0 0 L 0 715 Q ${dets.x} ${dets.y} 1530 378 L 1530 0 Z 0
-    // M 0 100 Q 1000 100 1530 100
-    gsap.to("svg path",{
-        attr:{d:updatedPath},
-        ease:"elastic.out(1,0.7)",
-        duration:1.5
-    })
-})
-line.addEventListener("mouseleave",function(dets){
-    gsap.to("svg path",{
-        attr:{d:init_path},
-        ease:"elastic.out(1,0.7)",
-        duration:1.5
-    })
- 
-})
+    gsap.to(svgPath, {
+        attr: { d: updatedPath },
+    });
+});
+line.addEventListener("mouseleave", function () {
+    // Reset the path on mouse leave
+    gsap.to(svgPath, {
+        attr: { d: initPath },
+        ease: "elastic.out(1, 0.5)",
+        duration: 2,
+    });
+});
 
-// mainjs
- 
-// modebtn.classList.add("mode-btn_dark")
+// mainjs+GSAP
+const gradient1 = document.querySelector("#brighterGradient");
+const stop1 = gradient1.querySelector("stop:nth-child(1)");
+const stop2 = gradient1.querySelector("stop:nth-child(2)");
+const stop3 = gradient1.querySelector("stop:nth-child(3)");
+
 
 modebtn.addEventListener("click", () => {
   const home = document.querySelector(".home");
 
   if (currmode === "light") {
-    line.style.opacity=0;
-    gsap.to(modebtn,{
-        duration:1.2,
-        
-    })
+    gsap.to(stop1, {
+        stopColor: "#2C2C2C", 
+        duration: 1.5,
+        ease: "power1.out"
+    });
+
+    gsap.to(stop2, {
+        stopColor: "#171717", 
+        duration: 1.5,
+        ease: "power1.out"
+    });
+
+    gsap.to(stop3, {
+        stopColor: "#2F2F2F", 
+        duration: 1.5,
+        ease: "power1.out"
+    });
     modebtn.style.setProperty('--c-color-1', '#C768FA');
     modebtn.style.setProperty('--c-color-2', '#CB67FD');
     modebtn.style.setProperty('--c-color-3', '#EBA6A9');
@@ -110,16 +158,33 @@ modebtn.addEventListener("click", () => {
     document.querySelector("#Projects").style.color = "#ffffff";
     gsap.to(pfpimg,{
         duration:1.2,
-        background:"linear-gradient(to bottom, #434343,rgb(17, 11, 11))",           
+        background:"linear-gradient(to left, #434343,rgb(17, 11, 11))",           
     })
     gsap.to(home,{
         // backgroundImage:"url('assests/img/dark.jpg')",
-        backdropFilter:"grayscale(1) brightness(0.4)",
+        backdropFilter:"grayscale(0.95) brightness(0.4)",
         duration:1.5,
     })
     morebtn.style.backgroundColor = "#52515f";
     currmode = "dark";
   } else {
+    gsap.to(stop1, {
+        stopColor: "#A73CFF", // Darker color
+        duration: 1.5,
+        ease: "power1.out"
+    });
+
+    gsap.to(stop2, {
+        stopColor: "#9828FF", // Darker middle color
+        duration: 1.5,
+        ease: "power1.out"
+    });
+
+    gsap.to(stop3, {
+        stopColor: "#9D2CFF", // Darkest color
+        duration: 1.5,
+        ease: "power1.out"
+    });
     gsap.to(pfpimg,{
         duration:1.2,
         background:"linear-gradient(to bottom, #fc00ff, #00dbde)"

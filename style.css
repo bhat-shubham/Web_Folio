@@ -50,12 +50,14 @@ a{
     /* height: 10vh; */
     /* background-color: #000; */
     /* z-index: 1000; */
+    /* opacity: 0.5; */
     /* position: relative; */
 }
 svg{
+    /* fill:blueviolet; */
     /* background-color: #a17fe0; */
     /* opacity: 0; */
-    /* z-index: 1; */
+    /* z-index: 0; */
     position: absolute;
     /* height: 1000; */
 }
@@ -175,6 +177,7 @@ svg{
     align-items: center;
     display: flex;
     gap:10vw;
+    z-index: 1000;
 
 }
 .intro_text{
@@ -362,9 +365,10 @@ svg{
 }
 .home{
     transition: background-image 0.5s ease-in-out;
-    /* background-color: #7042F4; */
-    background-image:url(/assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg)
+    background: linear-gradient(to right, #a01df1, #7700ff);
+    /* background-image:url(/assests/img/vackground-com-6XNIVSDzA2g-unsplash.jpg) */
     /* display: inline; */
+    z-index:-1;
 }
 /* .mode-btn{
     border-radius: 10px;
@@ -741,7 +745,7 @@ svg{
   }
 #pfp_img:hover{
     transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 150px var(--clr);
+    /* box-shadow: 0 0 150px var(--clr); */
     /* background: var(--clr); */
     /* border-style: dashed; */
     /* height: 47vh; */
@@ -790,12 +794,16 @@ footer{
     display: none;
 }
 #sm_logo{
-    border-color: #4E8098;
-    border-width: 3px;
+    /* padding: 5%; */
+    /* gap: 5vw; */
+    border-radius: 50%;
+    /* border-color: #4E8098; */
+    /* background-color: #fff; */
+    /* border-width: 3px; */
     display: flex;
     justify-content: space-evenly;
-    height: 45px;
-    padding-inline: 3px;
+    height: 48px;
+    /* padding-inline: 3px; */
     /* position: relative; */
 }
 #sm_logo1{
@@ -810,12 +818,6 @@ footer{
     position: fixed;
     opacity: 0;
     /* position: relative; */
-}
-#sm_logo:hover{
-    box-shadow: 0 0 85px var(--clr);
-    background: var(--clr);
-    transition-duration: 0.3s;
-    transform: translateY(-5px);
 }
 #text_socials{
     display: flex;
@@ -1336,8 +1338,8 @@ footer{
     align-items: center;
     height: 1300px;
     margin-top: auto;
-    border-width: 5px;
-    border-style: solid;
+    /* border-width: 5px; */
+    /* border-style: solid; */
     border-radius: 20px;
 }
 #resume_container{    
@@ -1350,6 +1352,7 @@ footer{
 }
 .wrapper_footer_home{
     backdrop-filter: blur(1000px);
+    height: 55px;
     /* border-left: none; */
     /* border-right: none; */
     background-color:#1b1a2ea9;
@@ -1415,7 +1418,7 @@ footer{
     opacity: 1;
     position: absolute;
     top: 50%; 
-    left: 48%; 
+    left: 48.5%; 
     transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
@@ -1424,9 +1427,10 @@ footer{
     color: white;
 }
 #sm_links_res{
-    margin-top: 1PX;
+    margin-left: 5px;
+    /* margin-top: 1PX; */
     /* height: 50px; */
-    /* gap: 1vh; */
+    gap: 0.4vw;
     display: flex;
     /* padding: 4px; */
     /* border-bottom:none; */
