@@ -961,7 +961,6 @@ footer{
         transform: scale(0); /* Optional: Scale down the path */
         transform-origin: center; /* Ensure scaling happens from the center */
     }
-}
     .str_holder{
         visibility: hidden;
         opacity: 0;
