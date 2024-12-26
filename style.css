@@ -172,7 +172,7 @@ svg{
         to{background-color:#1b1a2b2e;}
 }
 #main_contentss{
-    height: 87vh;
+    height: 77vh;
     justify-content: space-around;
     align-items: center;
     display: flex;
@@ -1378,28 +1378,18 @@ footer{
     margin: auto;
 }
 .wrapper_footer_res{
-    backdrop-filter: blur(10px);
+    background-color: #5e3ba95f;
+    backdrop-filter: blur(1000px);
     border-left: none;
     border-right: none;
-    /* margin-top: 0vh; */
-    /* border-style: solid; */
-
-    border-bottom:#70161E;
-    /* background:radial-gradient(#4286f4); */
-    /* background */
-    /* border-color: #70161E; */
-    /* margin-left: 5px; */
-    /* margin-right: px; */
-    backdrop-filter: blur(1000px);
     border-width:0.5PX;
     border-radius: 2PX;
     position: relative;
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-
-    margin-top:15vh;
+    height: 55px;
+    margin-top:10vh;
 }
 #brain{
     opacity: 0;

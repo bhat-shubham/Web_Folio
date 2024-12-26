@@ -12,21 +12,22 @@ gsap.from("#top_name",{duration:1,y:"-40%",opacity:0,delay:0.5});
 gsap.from(".intro_text",{duration:1.5,x:"5%",delay:0.5, opacity:0});
 gsap.from("#pfp",{duration:2,x:"-10%",opacity:0,delay:0.5,ease:"back"});
 gsap.to("#pfp",{
-    scale:0.8,
+    scale:0.7,
     scrollTrigger:{
         trigger:"#pfp img",
         scroller:"body",
         // markers:true,
         start:"top 10%",
-        scrub:4,
+        scrub:2,
         // ease:power
     }
 })
 gsap.from(resume,{
     opacity:0,
-    y:-50,
+    x:50,
     delay:0.2,
-    duration:1.5,
+    duration:1,
+    
     
     // ease:"power2.out",
 })
@@ -39,7 +40,7 @@ gsap.to(resume,{
 const down_but=document.querySelector("#down_button");
 gsap.from(down_but, { 
     duration: 1, 
-    y: "-40%", 
+    x: "-40%", 
     opacity: 0, 
     ease: "back",
     delay:0.3 });
@@ -49,21 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
     smlinks.forEach(sm_logo => { 
         sm_logo.addEventListener("mouseenter", function () {
             gsap.to(this, { 
-                y: -5,
+                y: -10,
                 duration: 0.2,
                 // backgroundColor: "rgba(0,0,0,0.5)",
                 // border: "solid",
-                boxShadow: "0 0 15px 5px rgba(128, 0, 128, 0.7)",
+                boxShadow: "0 0 15px 5px rgba(188, 9, 188, 0.7)",
                 // ease: "elastic.out(1, 0.4)",
             });
         });
 
         sm_logo.addEventListener("mouseleave", function () {
             gsap.to(this, {
-                boxShadow: "0 0 0px 0px #fff",
+                boxShadow: "0 0 0px 0px rgba(0, 0, 0, 0.7)",
                 y: 0,
-                duration: 0.2,
-                ease: "power4.out",
+                duration: 0.5,
+                ease: "power2.out",
             });
         });
     });
