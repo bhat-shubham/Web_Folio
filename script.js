@@ -83,7 +83,7 @@ var tl=gsap.timeline()
 tl.to(".menu_list",{
     // display: flex,
     right:0,
-    duration:0.5,
+    duration:0.3,
     // opacity:1
 })
 tl.from(".menu_list h1",{
