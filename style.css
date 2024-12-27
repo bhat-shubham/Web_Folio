@@ -944,6 +944,12 @@ footer{
     /* margin-top:50px;  */
     /* margin-top: 0px; */
 }
+.menu_list{
+  display: none;
+}
+#navbar i{
+    display: none;
+}
 
 @media only screen and (max-width:600px){
     .mode-btn_dark{
