@@ -952,6 +952,16 @@ footer{
 }
 
 @media only screen and (max-width:600px){
+  #navbar i{
+      display: flex;
+      /* opacity: 0; */
+  }
+  html{
+    overflow-x: hidden;
+  }
+  #cursor_bg{
+    display: none;
+  }
     .mode-btn_dark{
         display: none;
     }
@@ -999,6 +1009,7 @@ footer{
         font-size: 40px;
         position: absolute;
         right: 0;
+        color: #EBA6A9;
         /* z-index:-1; */
     }
     .menu_list i{
