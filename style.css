@@ -1020,6 +1020,15 @@ footer{
         color: #EBA6A9;
         /* z-index:-1; */
     }
+    .resume_home {
+      overflow-x: hidden  ;
+    }
+    #resume{
+      /* height: 439px;  */
+    }
+    img#resume {
+      height: 439px; 
+}
     .menu_list i{
         top:2%;
         right:5%;
@@ -1207,6 +1216,9 @@ footer{
         margin-left: 20%;
         /* margin-right: 50%; */
     }
+    .top_items{
+      display: none;
+    }
     #navbar{
         /* border-top: none; */
         /* border-left: none; */
@@ -1230,9 +1242,10 @@ footer{
         text-align: left;
         border-radius:0px;
         position: relative; */
+        /* display: none; */
     }
     #navitem{
-        display: none;
+        /* display: none; */
     }
     /* .top_items  {
         display: none;
