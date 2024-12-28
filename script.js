@@ -8,6 +8,7 @@
 //     duration:3,
 //     repeat:-1,
 // })
+import { Analytics } from "@vercel/analytics/react"
 let modebtn = document.querySelector(".mode-btn_dark");
 // var below_but=document.querySelector(".document.body");
 const resume=document.querySelector("#resume");
