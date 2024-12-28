@@ -1026,6 +1026,9 @@ footer{
     #resume{
       /* height: 439px;  */
     }
+  .wrapper_footer_res {
+    justify-content:center !important;
+  }
     img#resume {
       height: 439px; 
 }
