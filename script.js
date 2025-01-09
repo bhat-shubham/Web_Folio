@@ -1,13 +1,3 @@
-// gsap.registerPlugin(TextPlugin)
-// const texts = ["Web Developer.", "Designer.", "Creator."];
-// gsap.to("#w1",{
-//     text:"Web Developer.",
-//     ease:"power2.out",
-//     // text:"Employee",
-//     delay:2,
-//     duration:3,
-//     repeat:-1,
-// })
 let modebtn = document.querySelector(".mode-btn_dark");
 // var below_but=document.querySelector(".document.body");
 const resume=document.querySelector("#resume");
@@ -19,8 +9,8 @@ var cursor=document.querySelector("#cursor_bg");
 const line = document.querySelector(".str_holder");// GSAP
 gsap.from("li", { duration: 1, y: "-40%", opacity: 0, ease: "back", stagger: 0.5,delay:0.3 });
 gsap.from("#top_name",{duration:1,y:"-40%",opacity:0,delay:0.5});
-gsap.from(".intro_text",{duration:1.5,x:"5%",delay:0.5, opacity:0});
-gsap.from("#pfp",{duration:2,x:"-10%",opacity:0,delay:0.5,ease:"back"});
+gsap.from(".intro_text",{duration:1.5,x:"5%",delay:0.3, opacity:0});
+gsap.from("#pfp",{duration:2,x:"-10%",opacity:0,delay:0.3,ease:"back"});
 gsap.to("#pfp",{
     scale:0.7,
     scrollTrigger:{
